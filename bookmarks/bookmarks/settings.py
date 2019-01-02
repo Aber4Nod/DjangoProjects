@@ -29,16 +29,21 @@ LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 
-ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1', '1fa187b8.ngrok.io']
+ALLOWED_HOSTS = ['mysite.com',
+                 'localhost',
+                 '127.0.0.1',
+                 'd8c783e9.ngrok.io',
+                 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Application definition
 
 INSTALLED_APPS = [
+    'sorl.thumbnail',
     'account.apps.AccountConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -48,7 +53,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social_django',
     'images.apps.ImagesConfig',
-    'sorl.thumbnail',
 ]
 
 MIDDLEWARE = [
