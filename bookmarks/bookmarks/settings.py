@@ -32,7 +32,7 @@ LOGOUT_URL = 'logout'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1', '0bd4ffb8.ngrok.io']
+ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1', '1fa187b8.ngrok.io']
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
