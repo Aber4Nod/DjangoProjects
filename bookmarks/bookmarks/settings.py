@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+from django.urls import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,6 +25,11 @@ SECRET_KEY = 'scv^+(#b%9#k&##rqis^il3fhjd*63__z^0ayp!hnp3kp16q^s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+ABSOLUTE_URL_OVERRIDES = {
+    'auth.user': lambda u: reverse_lazy('user_detail',
+                                        args=[u.username])
+}
 
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
