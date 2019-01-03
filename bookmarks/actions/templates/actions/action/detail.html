@@ -22,7 +22,6 @@
                     {% endif %}
                     {# end todo #}
                     {% if target.image %}
-                        <script>console.log("action.target.image!")</script>
                         {% thumbnail target.image "80x80" crop="100%" as im %}
                             <a href="{{ target.get_absolute_url }}">
                                 <img src="{{ im.url }}" class="user-detail">
