@@ -19,6 +19,11 @@ class Image(models.Model):
     users_like = models.ManyToManyField(settings.AUTH_USER_MODEL,
                                         related_name='images_liked',
                                         blank=True)
+    # Here we use denormalization - we could use 'Count' aggregation
+    # by users_like field instead, but it's too expensive in terms of
+    # query performance.
+    total_likes = models.PositiveIntegerField(db_index=True,
+                                              default=0)
 
     def get_absolute_url(self):
         return reverse('images:detail', args=[self.id, self.slug])
