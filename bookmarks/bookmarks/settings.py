@@ -41,7 +41,7 @@ MEDIA_URL = '/media/'
 ALLOWED_HOSTS = ['mysite.com',
                  'localhost',
                  '127.0.0.1',
-                 'd8c783e9.ngrok.io',
+                 'f414ffda.ngrok.io',
                  ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
